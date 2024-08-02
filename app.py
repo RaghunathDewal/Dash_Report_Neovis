@@ -10,7 +10,7 @@ def get_icon_from_assets(icon_filename):
 
 external_css = ["https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"]
 app = Dash(__name__, use_pages=True, external_stylesheets=external_css)
-
+server = app.server
 
 app.layout = dmc.MantineProvider(
     html.Div([
@@ -101,4 +101,4 @@ def ensure_correct_organization_id(href, stored_org_id):
     return href
 
 if __name__ == '__main__':
-    app.run(host= "0.0.0.0", port = 8050)
+    app.run_server(debug=False)
