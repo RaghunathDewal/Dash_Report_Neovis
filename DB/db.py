@@ -13,10 +13,14 @@ class DB:
         if cls.connection_pool is None:
             try:
 <<<<<<< HEAD
+<<<<<<< HEAD
                 url = os.getenv('PROD_DB_URL')
 =======
                 url = os.getenv('DB_URL')
 >>>>>>> 2666b96 (09-09-24)
+=======
+                url = os.getenv('PROD_DB_URL')
+>>>>>>> 13c84b8 (09-09-24)
                 cls.connection_pool = psycopg2.pool.SimpleConnectionPool(1, 10, dsn=url)
                 print("Database connection pool initialized.")
             except Exception as e:
