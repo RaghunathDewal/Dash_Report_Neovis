@@ -59,10 +59,18 @@ layout = dmc.MantineProvider(
                     columnDefs=column_defs,
                     rowData=[],
                     rowStyle = {"backgroundColor": "white", "color": "Black"},
+<<<<<<< HEAD
                     style={'height': '65vh', 'width': '100%', 'text-align': 'center'},
                     dashGridOptions={"rowHeight": 60,
             }
                 )
+=======
+                    style={'height': '67vh', 'width': '100%', 'text-align': 'center'},
+                    dashGridOptions={"rowHeight": 60,
+            }
+                )
+                
+>>>>>>> 2666b96 (09-09-24)
             ])
         ])
     ]
