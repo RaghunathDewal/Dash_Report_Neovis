@@ -9,18 +9,10 @@
 
 body {
     margin: 10px;
-<<<<<<< HEAD
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    height: 95vh;
-    background-color: #F8F7FF;
-    overflow-x: hidden;
-=======
     position: relative;
     height: 100vh; /* Changed from 95vh to 100vh */
     background-color: #F8F7FF;
     overflow: hidden;
->>>>>>> 2666b96 (09-09-24)
 }
 
 .navbar {
@@ -42,48 +34,21 @@ body {
 .logoimg {
     height: 50px;
     transition: transform 0.3s ease;
-<<<<<<< HEAD
-=======
     padding-left: 10px;
 
->>>>>>> 2666b96 (09-09-24)
 }
 
 .ag-theme-alpine .ag-root-wrapper,
 .ag-theme-alpine .ag-root {
-<<<<<<< HEAD
-    border-radius: 15px;
-    overflow: hidden;
-    column-width: auto;
-=======
     border-radius: 5px;
     overflow: hidden;
     /* column-width: auto; */
->>>>>>> 2666b96 (09-09-24)
 }
 
 .ag-theme-alpine .ag-center-cols-container {
     overflow: hidden;
 }
 
-<<<<<<< HEAD
-.ag-theme-alpine .ag-header,
-.ag-theme-alpine .ag-pinned-left-header,
-.ag-theme-alpine .ag-pinned-right-header {
-    border-radius: 20px 20px 0 0;
-}
-
-.ag-theme-alpine .ag-header-cell {
-    border-bottom: none;
-}
-
-.ag-theme-alpine .ag-row,
-.ag-theme-alpine .ag-row-first,
-.ag-theme-alpine .ag-row-last {
-    border-radius: 0 0 20px 20px;
-}
-=======
->>>>>>> 2666b96 (09-09-24)
 
 .ag-theme-alpine .ag-row-even,
 .ag-theme-alpine .ag-row-odd {
@@ -99,20 +64,16 @@ body {
     margin-bottom: 2px;
 }
 
-.ag-theme-alpine {
+/* .ag-theme-alpine {
     scrollbar-color: #5048E5 #E9E8FC;
-}
+} */
 
 .ag-theme-alpine .ag-cell {
     font-family: Verdana;
     font-size: 15px;
     padding-top: 10px;
-<<<<<<< HEAD
-    border-bottom: 2px solid #bbb;
-=======
     border-bottom: 2px solid #d6d4d4;
     /* border: none; */
->>>>>>> 2666b96 (09-09-24)
 }
 
 .ag-theme-alpine .ag-row-even {
@@ -121,21 +82,11 @@ body {
 
 .ag-theme-alpine .ag-header {
     font-family: 'Outfit';
-<<<<<<< HEAD
-    background-color: #f3f4f6;
-}
-
-.ag-theme-alpine .ag-header-cell {
-    font-size: 18px;
-}
-
-=======
     background-color: white;
     font-size: 18px;
 }
 
 
->>>>>>> 2666b96 (09-09-24)
 .card {
     position: relative;
     padding-left: 10px;
@@ -153,11 +104,7 @@ body {
     left: 0;
     width: 5px; /* Adjust the width as needed */
     height: 100%;
-<<<<<<< HEAD
-    background-color: #5048E5; /* Change the color as needed */
-=======
     background-color: #5048E5;
->>>>>>> 2666b96 (09-09-24)
     border-radius: 10px; /* Adjust the radius as needed */
 }
 
@@ -209,14 +156,9 @@ body {
 
 .header {
     background-color: #f8f7ff;
-<<<<<<< HEAD
-    border-bottom: 3px solid #bbb;
-    padding: 10px;
-=======
     /* border-bottom: 3px solid #bbb; */
     padding: 10px;
     padding-left: 19px;
->>>>>>> 2666b96 (09-09-24)
 }
 
 .content {
@@ -227,13 +169,8 @@ body {
 
 .footer {
     background-color: #f8f7ff;
-<<<<<<< HEAD
-    border-top: 3px solid #bbb;
-    padding: 10px;
-=======
     /* border-top: 3px solid #bbb; */
     padding-bottom: 20px;
->>>>>>> 2666b96 (09-09-24)
     text-align: center;
 }
 
