@@ -1,6 +1,5 @@
 import dash
 from dash import Dash, html, dcc, callback, Input, Output, State
-import dash_auth
 import dash_mantine_components as dmc
 from urllib.parse import urlparse, parse_qs, urlencode
 
@@ -13,7 +12,6 @@ external_css = [
     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 ]
 app = Dash(__name__, use_pages=True, external_stylesheets=external_css)
-server = app.server
 
 
 app.layout = dmc.MantineProvider(
@@ -41,6 +39,13 @@ app.layout = dmc.MantineProvider(
                             dmc.NavLink(
                                 label="Time Report",
                                 href="/time",
+                                leftSection=get_icon_from_assets(
+                                    "mdi--clock-outline.svg"
+                                ),
+                            ),
+                            dmc.NavLink(
+                                label="Employee Rating",
+                                href="/Employee",
                                 leftSection=get_icon_from_assets(
                                     "mdi--clock-outline.svg"
                                 ),
@@ -122,4 +127,4 @@ def ensure_correct_organization_id(href, stored_org_id):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run(debug=True)
