@@ -3,7 +3,9 @@ from psycopg2 import pool
 import polars as pl
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
+
 
 class DB:
     connection_pool = None
@@ -12,7 +14,7 @@ class DB:
     def initialize(cls):
         if cls.connection_pool is None:
             try:
-                url = os.getenv('PROD_DB_URL')
+                url = os.getenv("PROD_DB_URL")
                 cls.connection_pool = psycopg2.pool.SimpleConnectionPool(1, 10, dsn=url)
                 print("Database connection pool initialized.")
             except Exception as e:
@@ -23,7 +25,7 @@ class DB:
     def execute_query(cls, query):
         if cls.connection_pool is None:
             return None, "Database not initialized"
-        
+
         df = None
         try:
             conn = cls.connection_pool.getconn()
@@ -36,7 +38,13 @@ class DB:
             data = cursor.fetchall()
 
             column_names = [desc[0] for desc in cursor.description]
-            df = pl.DataFrame(data, schema=column_names, orient="row", strict=False, infer_schema_length=None)
+            df = pl.DataFrame(
+                data,
+                schema=column_names,
+                orient="row",
+                strict=False,
+                infer_schema_length=None,
+            )
 
             cursor.close()
             cls.connection_pool.putconn(conn)
