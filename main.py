@@ -1,6 +1,5 @@
 import dash
 from dash import Dash, html, dcc, callback, Input, Output, State
-import dash_auth
 import dash_mantine_components as dmc
 from urllib.parse import urlparse, parse_qs, urlencode
 
