@@ -1,0 +1,65 @@
+[33mcommit 8d923bc85de6f8f274f368d5739aefdb12d6b385[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mprod_deploy[m[33m)[m
+Author: RaghunathDewal <rsdewal15@gmail.com>
+Date:   Sat Sep 14 16:21:03 2024 +0530
+
+    "Third Report"
+
+[33mcommit 8be888a678aed8d3ce2d7882aa6fafd685bd2831[m[33m ([m[1;31morigin/prod_deploy[m[33m)[m
+Author: RaghunathDewal <rsdewal15@gmail.com>
+Date:   Mon Sep 9 17:55:38 2024 +0530
+
+    09-09-24-new
+
+[33mcommit 659ca26c137091b946c04cdceb9bf91930834675[m
+Author: RaghunathDewal <rsdewal15@gmail.com>
+Date:   Mon Sep 9 17:55:13 2024 +0530
+
+    09-09-24
+
+[33mcommit 006e9e913c1b12ccc7937abc9cf78e1f01c292b7[m
+Author: RaghunathDewal <rsdewal15@gmail.com>
+Date:   Mon Sep 9 17:37:39 2024 +0530
+
+    New
+
+[33mcommit 8670717fe7a0f9b10d152b21e8a05e5dc61c73fb[m
+Author: RaghunathDewal <rsdewal15@gmail.com>
+Date:   Mon Sep 9 17:24:49 2024 +0530
+
+    09-09-24
+
+[33mcommit c43cfec9514a58f77537aa04b88a33ce1fb8e55c[m
+Author: Golusula76 <125452715+Golusula76@users.noreply.github.com>
+Date:   Tue Sep 3 13:20:37 2024 +0530
+
+    Update app.py
+
+[33mcommit 09874860c4ca9d019f6285c2c2a964ff83645a3e[m
+Author: Golusula76 <125452715+Golusula76@users.noreply.github.com>
+Date:   Tue Sep 3 13:13:28 2024 +0530
+
+    Update requirements.txt
+
+[33mcommit 97fc5189c030a0cfbf2f48d7e9b7a1748f14799f[m
+Author: Golusula76 <125452715+Golusula76@users.noreply.github.com>
+Date:   Tue Sep 3 13:10:02 2024 +0530
+
+    Update and rename requirement.txt to requirements.txt
+
+[33mcommit d052fd8a6adc3d4dc0061ce66425aa6fee58a091[m
+Author: Golusula76 <125452715+Golusula76@users.noreply.github.com>
+Date:   Tue Sep 3 13:06:39 2024 +0530
+
+    Create Procfile
+
+[33mcommit a1bcba0b55054082939cc94ce9d00082d47d608f[m
+Author: Golusula76 <125452715+Golusula76@users.noreply.github.com>
+Date:   Tue Sep 3 13:05:04 2024 +0530
+
+    Rename main.py to app.py
+
+[33mcommit 71df746acdc22816e0531b66a45a7c61bba3b116[m
+Author: MLOps-MaitriAI <hayyanshah111@gmail.com>
+Date:   Tue Sep 3 12:39:35 2024 +0530
+
+    my commit

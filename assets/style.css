@@ -113,7 +113,7 @@ body {
     display: flex;
     height: 100vh;
 }
-
+/* 
 .sidebar {
     width: 60px;
     height: 100vh;
@@ -138,8 +138,8 @@ body {
     width: 50px;
     height: 50px;
     margin-top: 2vh;
-    transition: margin 0.3s, transform 0.3s; /* Smooth transition for the margin and transform */
-}
+    transition: margin 0.3s, transform 0.3s; 
+} */
 
 .main-content {
     flex: 1;
@@ -180,7 +180,7 @@ body {
 }
 
 .mantine-NavLink-root {
-    color: white;
+    color: pink;
     font-family: 'Outfit';
     padding: 2vh;
     transition: background-color 0.3s;
@@ -191,12 +191,79 @@ body {
 }
 
 .mantine-NavLink-label {
-    display: none;
-}
-
-.sidebar:hover .mantine-NavLink-label {
     display: inline;
 }
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: #11101D;
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.sidebar:hover {
+    width: 250px;
+}
+
+.sidebar .logo-details {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar .logo-details .icon,
+.sidebar .logo-details .logo_name {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar:hover .logo-details .icon,
+.sidebar:hover .logo-details .logo_name {
+    opacity: 1;
+}
+
+
+.sidebar li a .links_name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.sidebar:hover li a .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ... (rest of the CSS remains unchanged) ... */
+
+.home-section {
+    position: relative;
+    background: #E4E9F7;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.sidebar:hover ~ .home-section {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+/* 
+.sidebar:hover .mantine-NavLink-label {
+    display: inline;
+} */
 
 
 .custom-dropdown .Select-control {
