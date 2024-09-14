@@ -12,6 +12,7 @@ external_css = [
     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 ]
 app = Dash(__name__, use_pages=True, external_stylesheets=external_css)
+server = app.server
 
 
 app.layout = dmc.MantineProvider(
@@ -124,6 +125,8 @@ def ensure_correct_organization_id(href, stored_org_id):
             new_url = parsed_url._replace(query=new_query).geturl()
             return new_url
     return href
+if __name__ == "__main__":
+    app.run_server(debug=False)
 
 
 if __name__ == "__main__":
