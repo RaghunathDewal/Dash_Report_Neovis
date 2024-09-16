@@ -134,7 +134,9 @@ def ensure_correct_organization_id(href, stored_org_id):
             new_url = parsed_url._replace(query=new_query).geturl()
             return new_url
     return href
+if __name__ == "__main__":
+    app.run_server(debug=False)
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(debug=False)
