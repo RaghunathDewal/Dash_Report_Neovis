@@ -45,6 +45,7 @@ class DB:
                 strict=False,
                 infer_schema_length=None,
             )
+            
 
             cursor.close()
             cls.connection_pool.putconn(conn)

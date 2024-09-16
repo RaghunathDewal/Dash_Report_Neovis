@@ -5,14 +5,14 @@ from urllib.parse import urlparse, parse_qs, urlencode
 
 
 def get_icon_from_assets(icon_filename):
-    return html.Img(src=f"/assets/{icon_filename}", height=16)
+    return html.Img(src=f"/assets/{icon_filename}")
 
 
 external_css = [
     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 ]
 app = Dash(__name__, use_pages=True, external_stylesheets=external_css)
-
+server = app.server
 
 app.layout = dmc.MantineProvider(
     html.Div(
@@ -26,28 +26,38 @@ app.layout = dmc.MantineProvider(
                         className="sidebar",
                         children=[
                             dcc.Link(
-                                html.Img(className="logoimg", src="/assets/Logo.svg"),
+                                html.Img(style={'padding-left': '5px','margin-top':'13px'}, src="/assets/Logo.svg"),
                                 href="/",
                             ),
-                            dmc.NavLink(
-                                label="Home",
-                                href="/",
-                                leftSection=get_icon_from_assets(
-                                    "bi--house-door-fill.svg"
+                            dmc.Tooltip(
+                                label="Go to Home",
+                                position="right",
+                                children=dmc.NavLink(
+                                    
+                                    href="/",
+                                    leftSection=get_icon_from_assets(
+                                        "bi--house-door-fill.svg"
+                                    ),
                                 ),
                             ),
-                            dmc.NavLink(
-                                label="Time Report",
-                                href="/time",
-                                leftSection=get_icon_from_assets(
-                                    "mdi--clock-outline.svg"
+                            dmc.Tooltip(
+                                label="View Time Report",
+                                position="right",
+                                children=dmc.NavLink(
+                                    href="/time",
+                                    leftSection=get_icon_from_assets(
+                                        "mdi--clock-outline.svg"
+                                    ),
                                 ),
                             ),
-                            dmc.NavLink(
-                                label="Employee Rating",
-                                href="/Employee",
-                                leftSection=get_icon_from_assets(
-                                    "mdi--clock-outline.svg"
+                            dmc.Tooltip(
+                                label="Check Employee Rating",
+                                position="right",
+                                children=dmc.NavLink(
+                                    href="/Employee",
+                                    leftSection=get_icon_from_assets(
+                                        "mdi--clock-outline.svg"
+                                    ),
                                 ),
                             ),
                         ],
@@ -127,4 +137,4 @@ def ensure_correct_organization_id(href, stored_org_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run_server(debug=True)

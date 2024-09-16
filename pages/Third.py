@@ -39,7 +39,7 @@ layout = dmc.MantineProvider(
                     [
                         AgGrid(
                             className="ag-theme-alpine",
-                            defaultColDef={"resizable": True},
+                            defaultColDef={"resizable": False},
                             columnSize="sizeToFit",
                             id="Employee_table",
                             columnDefs=column_defs,

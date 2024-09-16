@@ -74,10 +74,11 @@ def get_employee_date():
         ' ', 
         UPPER(SUBSTRING(u.last_name FROM 1 FOR 1)), 
         LOWER(SUBSTRING(u.last_name FROM 2))
-        ) AS Employee_name,t.id as task_id,t.task_title ,t.task_description  ,t.time_spent,t.comments,t.quality_rating,p.property_name,t.organization_id 
+        ) AS Employee_name,t.id as task_id,t.task_title ,t.task_description  ,t.time_spent,ti.inspection_comment,ti.inspection_rating,p.property_name,t.organization_id 
         from task t left join "user" u 
         on t.assigned_to_id = u.id
-        left  join property p  on t.property_id=p.id;'''
+        left  join property p  on t.property_id=p.id
+        left join task_inspection ti on t.id=ti.task_id;'''
     df3, query_err = DB.execute_query(query)
     if query_err:
         print(f"Error executing query: {query_err}")
@@ -90,10 +91,11 @@ def get_employee_date():
                 "task_title": "Task_Title",
                 "task_description": "Summary",
                 "time_spent": "Time_Spent",
-                "comments": "Comments",
-                "quality_rating": "Rating",
+                "inspection_comment": "Comments",
+                "inspection_rating": "Rating",
                 "property_name": "Location",
                 "organization_id": "ORG",
             }
         )
+        df3 = df3.sort("Task_ID",descending=True)  
         return df3
