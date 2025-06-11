@@ -26,7 +26,7 @@ app.layout = dmc.MantineProvider(
                         className="sidebar",
                         children=[
                             dcc.Link(
-                                html.Img(style={'padding-left': '5px','margin-top':'13px'}, src="/assets/Logo.svg"),
+                                html.Img(className="logoimg2",style={'margin-top':'13px'}, src="/assets/ICON.png"),
                                 href="/",
                             ),
                             dmc.Tooltip(
@@ -71,7 +71,7 @@ app.layout = dmc.MantineProvider(
                                     dcc.Link(
                                         html.Img(
                                             className="logoimg",
-                                            src="/assets/Full Logo 1.svg",
+                                            src="/assets/NAME.png",
                                         ),
                                         href="/",
                                     )
@@ -88,7 +88,7 @@ app.layout = dmc.MantineProvider(
                                             dcc.Link(
                                                 html.Img(
                                                     className="logoimg",
-                                                    src="/assets/Full Logo 1.svg",
+                                                    src="/assets/NAME.png",
                                                 ),
                                                 href="/",
                                             )
